@@ -241,6 +241,16 @@
         width: 90%;
       }
     }
+
+    @media screen and (max-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+  .heart {
+    font-size: 20px;
+  }
+}
+
   </style>
 </head>
 <body>
@@ -272,7 +282,7 @@
   </div>
   
   <p>
-    I hope your day will be just as beautiful as the smile on your face as you are reading this.
+    I hope your day will be as beautiful as the smile on your face as you read this.
      just know I will always be proud of you.<br>
     I hope you you wil achieve amazing things in life and in your academics.<br>
      I will always be rooting for you from a distance.<br>
@@ -280,7 +290,6 @@
   </p>
   <h1>Happy Birthday💖</h1>
 
-  <h2>Our Memories</h2>
 
   <div class="butterfly">
     <img src="butterfly.png" alt="Butterfly">
@@ -320,7 +329,7 @@
   function validateLogin() {
     const name = document.getElementById('name').value.trim().toLowerCase();
     const password = document.getElementById('password').value.trim().toLowerCase();
-    if (name === "ngwana" && password === "kgomotso") {
+    if (name === "Kgomotso" && password === "Ngwana") {
       document.getElementById('login-container').style.display = 'none';
       document.getElementById('main-content').style.display = 'block';
     } else {
