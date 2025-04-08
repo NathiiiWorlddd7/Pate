@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For My Love</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #ffdde1, #ee9ca7);
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    body {
+    background: linear-gradient(45deg, #fbc2eb, #a6c1ee);
+    background-size: 400% 400%;
+    animation: gradientShift 10s ease infinite;
+  }
+
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .sparkle {
+    position: absolute;
+    font-size: 50px;
+    animation: sparkleAnimation 1.5s infinite;
+  }
+
+  @keyframes sparkleAnimation {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(1.2);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(0);
+      opacity: 0;
+    }
+  }
+
+  .sparkle:nth-child(odd) {
+    animation-duration: 1.2s;
+  }
+
+  .sparkle:nth-child(even) {
+    animation-duration: 1.8s;
+  }
+
+    body::before {
+  content: "💖";
+  font-size: 3rem;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: float 3s infinite ease-in-out;
+  opacity: 0.3;
+}
+
+@keyframes float {
+  0% { transform: translate(-50%, -50%) scale(1); }
+  50% { transform: translate(-50%, -60%) scale(1.2); }
+  100% { transform: translate(-50%, -50%) scale(1); }
+}
+
+    .login-container, .main-content {
+      display: none;
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+    }
+    .login-container {
+      display: block;
+      margin-top: 100px;
+    }
+    input[type="text"], input[type="password"] {
+      padding: 10px;
+      margin: 10px;
+      width: 80%;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #f06292;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    h1, h2 {
+      color: #880e4f;
+    }
+
+    h1 {
+  animation: pulse 2s infinite;
+}
+
+.heart-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+
+  .heart-particles span {
+    position: absolute;
+    font-size: 24px;
+    color: #ff69b4;
+    opacity: 0;
+    animation: heartParticles 4s infinite;
+  }
+
+  @keyframes heartParticles {
+    0% { opacity: 0; transform: translateY(0); }
+    50% { opacity: 1; transform: translateY(-50px); }
+    100% { opacity: 0; transform: translateY(0); }
+  }
+
+  .heart-particles span:nth-child(odd) {
+    animation-duration: 4s;
+  }
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); color: #e91e63; }
+  100% { transform: scale(1); }
+}
+
+.butterfly {
+    position: absolute;
+    top: 0;
+    animation: butterflyFly 6s linear infinite;
+    z-index: 2;
+  }
+
+  @keyframes butterflyFly {
+    0% {
+      transform: translateX(-100px) translateY(-100px) rotate(0deg);
+      opacity: 0;
+    }
+    50% {
+      transform: translateX(100vw) translateY(100vh) rotate(180deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(100px) translateY(-100px) rotate(360deg);
+      opacity: 0;
+    }
+  }
+
+  .butterfly img {
+    width: 30px;
+    height: auto;
+  }
+
+  @keyframes heartFloat {
+    0% {
+      transform: translateY(0) scale(0.5);
+      opacity: 1;
+    }
+    50% {
+      transform: translateY(-30px) scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(0) scale(0.5);
+      opacity: 0;
+    }
+  }
+
+  .heart {
+    position: absolute;
+    font-size: 24px;
+    color: #ff69b4;
+    animation: heartFloat 3s infinite ease-in-out;
+  }
+
+  .heart:nth-child(odd) {
+    animation-duration: 3.5s;
+  }
+
+  .heart:nth-child(even) {
+    animation-duration: 4s;
+  }
+
+
+@keyframes float {
+  0% { transform: translate(-50%, -50%) scale(1); }
+  50% { transform: translate(-50%, -60%) scale(1.2); }
+  100% { transform: translate(-50%, -50%) scale(1); }
+}
+
+    .collage {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .collage img, .collage video {
+      width: 250px;
+      height: auto;
+      border-radius: 10px;
+      object-fit: cover;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    .collage img, .collage video {
+  transition: transform 0.3s ease, opacity 1s ease;
+  opacity: 0.8;
+}
+.collage img:hover, .collage video:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+    audio {
+      display: none;
+    }
+    @media (max-width: 600px) {
+      .collage img, .collage video {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<audio autoplay loop>
+  <source src="song.m4a" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<div class="login-container" id="login-container">
+  <h2>Happy Birthday</h2>
+  <p>Please enter your name and the nickname I gave you as the password</p>
+  <input type="text" id="name" placeholder="Your Name"><br>
+  <input type="password" id="password" placeholder="Password"><br>
+  <button onclick="validateLogin()">Enter</button>
+</div>
+
+
+<div class="main-content" id="main-content">
+
+  <div class="collage">
+  
+    <img src="pic1.jpeg" alt="Photo 1">
+    <video controls muted autoplay loop>
+      <source src="vid1.mov" type="video/mp4">
+    </video>
+    <img src="pic2.jpeg" alt="Photo 2">
+  
+  </div>
+  
+  <p>
+    I hope your day will be just as beautiful as the smile on your face as you are reading this.
+     just know I will always be proud of you.<br>
+    I hope you you wil achieve amazing things in life and in your academics.<br>
+     I will always be rooting for you from a distance.<br>
+    <br><br>
+  </p>
+  <h1>Happy Birthday💖</h1>
+
+  <h2>Our Memories</h2>
+
+  <div class="butterfly">
+    <img src="butterfly.png" alt="Butterfly">
+  </div>
+
+  <div class="heart" style="top: 10%; left: 15%;">💖</div>
+<div class="heart" style="top: 30%; left: 45%;">💖</div>
+<div class="heart" style="top: 60%; left: 70%;">💖</div>
+<div class="heart" style="top: 80%; left: 90%;">💖</div>
+
+<div class="sparkle" style="top: 5%; left: 10%;">✨</div>
+<div class="sparkle" style="top: 30%; left: 20%;">✨</div>
+<div class="sparkle" style="top: 60%; left: 50%;">✨</div>
+<div class="sparkle" style="top: 80%; left: 80%;">✨</div>
+
+<div class="heart-particles">
+  <span style="left: 20%; animation-duration: 3.5s;">💖</span>
+  <span style="left: 50%; animation-duration: 4s;">💖</span>
+  <span style="left: 80%; animation-duration: 4.5s;">💖</span>
+</div>
+
+
+  <div class="collage">
+    
+    <img src="pic3.jpeg" alt="Photo 3">
+    <video controls muted autoplay loop>
+      <source src="vid2.mov" type="video/mp4">
+    </video>
+    <img src="pic4.png" alt="Photo 4">
+    
+    
+   
+  </div>
+</div>
+
+<script>
+  function validateLogin() {
+    const name = document.getElementById('name').value.trim().toLowerCase();
+    const password = document.getElementById('password').value.trim().toLowerCase();
+    if (name === "ngwana" && password === "kgomotso") {
+      document.getElementById('login-container').style.display = 'none';
+      document.getElementById('main-content').style.display = 'block';
+    } else {
+      alert("Oops! Wrong name or password.");
+    }
+  }
+</script>
+
+</body>
+</html>
